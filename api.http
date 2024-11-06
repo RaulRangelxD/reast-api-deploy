@@ -1,0 +1,33 @@
+### All movies
+GET http://localhost:3000/movies
+
+### Movies for id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Movies for genre
+GET http://localhost:3000/movies?genre=action
+
+### create movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://m.media-amazon.com/images/I/91Rc8cAmnAL._AC_UF1000,1000_QL80_.jpg",
+  "genre": ["Crime", "Drama"],
+  "rate": 8.8
+}
+
+### Update movie
+PATCH  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1993
+}
+
+### Delete movie
+DELETE  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
